@@ -1,0 +1,266 @@
+/*
+Autor: Jorge Marcelo
+Data de Criação: 10/07/2023
+Github: https://github.com/Jorge-Marcelo
+Linkedin: https://www.linkedin.com/in/jorge-marcelo-067a5017b/
+*/ 
+
+/*Google Fonts*/
+/*Fonte: Agdasima*/
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap');
+/*Fonte: Oswald*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+/*Fonte: Kanit*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+
+/*Configutações padrão*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/*cores, posicionamento e background*/
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #23242a;
+}
+
+/*Definindo borda animada*/
+.container:before{
+content: "";
+height: 160%;
+width: 160%;
+position: absolute;
+background: conic-gradient(#fd004c,#fe9000,#fff020,#3edf4b,#3363ff,#b102b7,#fd004c);
+left: -25%;
+top: -25%;
+animation: spin 2s infinite linear;
+}
+
+/*Animação da borda */
+@keyframes spin{    
+100%{
+transform: rotate(360deg);
+}
+}
+    
+/*Configuração de textos*/
+h1{
+font-family: 'Agdasima', sans-serif;
+color: #FFF;
+text-align: center;
+font-size: 2.5rem;
+}
+
+h2{
+font-family: 'Agdasima', sans-serif;
+font-weight: 900;
+font-size: 2rem;
+text-align: center;
+color: white;
+margin-top: 20px;
+}
+
+/*Label do formulario*/
+label{
+font-family: 'Agdasima', sans-serif;
+font-weight: 900;
+font-size: 1.6rem;
+color: white;
+margin: 5px;
+}
+
+/*Container da pagina*/
+.container{
+position: relative;
+width: 300px;
+height: 760px;
+background-color: #1c1c1c;
+overflow: hidden;
+}
+
+/*Container do formulario*/
+.container form {
+position: absolute;
+inset: 4px;
+background: #222;
+padding: 10px 40px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+}
+
+/*SEssão para cada label e input do formulario*/
+section{
+position: relative;
+width: 230px;
+}
+
+/*Inputs do formulario*/
+input{
+position: relative;
+width: 100%;
+padding: 5px 5px 5px;
+background: transparent;
+outline: none;
+border-radius: 10px;
+border: 3px solid rgb(255, 255, 255);
+color: white;
+font-size: 1.1rem;
+}
+
+/*Classes especiais para validação*/
+input.error.active{
+border: 3px solid red;
+}
+
+span.error.active{
+color:  red;
+font-family: 'Agdasima', sans-serif;
+font-weight: 900;
+font-size: 1.2rem;
+}
+
+
+/*Botão do formulario*/
+button{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px  0 0;
+height: 60px;
+border-radius: 10px;
+text-align: center;
+color: rgb(255, 230, 0);
+border: 3px solid rgb(255, 196, 0);
+background: transparent;
+font-size: 1.7rem;
+font-family: 'Kanit', sans-serif;
+font-weight: 900;
+cursor: pointer;
+
+}
+
+button:hover{
+background-color: #ff9100;
+transition: 0.7s;
+color: #ffffff;
+font-weight: 900;
+border: 3px solid rgb(255, 255, 255);
+}
+
+/*rodape*/
+footer{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 5px;
+}
+
+/*clsses das redes sociais*/
+.instagram-icon{
+position: relative;
+right: 25px;
+}
+
+.linkedin-icon{
+position: relative;
+right: 35px;
+}
+
+.github-icon{
+position: relative;
+right: 43px;
+}
+
+.instagram{
+margin-top: 15px;
+width: 200px;
+height: 50px;
+border-radius: 10px;
+text-align: center;
+color:  rgb(255, 0, 98);
+border: 3px solid rgb(255, 0, 98);
+background: transparent;
+font-size: 1.3rem;
+cursor: pointer;
+}
+
+.instagram:hover{
+background-color: #860375;
+transition: 0.7s;
+color:  rgb(255, 0, 98);
+border: 3px solid rgb(255, 255, 255);
+}
+
+
+.linkedin:hover{
+background-color: #020469;
+transition: 0.7s;
+color:rgb(0, 60, 255);
+border: 3px solid rgb(255, 255, 255);
+}
+
+.github:hover{
+background-color: #000000;
+transition: 0.7s;
+color:rgb(255, 255, 255);
+border: 3px solid rgb(255, 255, 255);
+}
+
+
+.linkedin{
+margin-top: 15px;
+width: 200px;
+height: 50px;
+border-radius: 10px;
+text-align: center;
+color:rgb(0, 60, 255);
+border: 3px solid rgb(0, 60, 255);
+background: transparent;
+font-size: 1.3rem;
+}
+
+.github{
+margin-top: 15px;
+width: 200px;
+height: 50px;
+border-radius: 10px;
+text-align: center;
+color:rgb(255, 255, 255);
+border: 3px solid rgb(255, 255, 255);
+background: transparent;
+font-size: 1.3rem;
+cursor: pointer;
+}
+
+/*Animação com sprite*/
+.animation{
+position: absolute;
+top:  90%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: calc(768px/6);
+height: 125px;
+background: url("../images/Sonic.png");
+animation: animation 1s steps(6) infinite;
+cursor: pointer;
+}
+
+
+@keyframes animation {
+from{
+background-position: 0;
+}
+to{
+background-position: 768px;
+}
+}
+
+
